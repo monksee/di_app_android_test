@@ -5593,9 +5593,7 @@ function uploadProfilePic(){
 		}
 
 		if($.trim(r.response) === "0") {
-                        alert("r " + JSON.stringify(r));
-			alert("Sorry! We have encountered an error r.response" + JSON.stringify(r.response));
-
+			alert("Sorry! We have encountered an error");
 			def.resolve(0);
 		}else{
 			
@@ -5608,7 +5606,7 @@ function uploadProfilePic(){
 		enableButton("#cancel_profile_pic_upload", "<i class='fa fa-times'></i>");
 		
 		//upload of pic failed.
-		alert("Sorry! We have encountered an error: fail: " + JSON.stringify(error));
+		alert("Sorry! We have encountered an error: " + JSON.stringify(error));
 		def.resolve(0);
 	}
 	var uri = encodeURI(app_root_url_for_image_uploads + "user_profile/update_profile_pic.php");
